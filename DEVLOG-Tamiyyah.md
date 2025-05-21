@@ -12,7 +12,6 @@ Spent the period plus a few brief talks and text messages previously brainstormi
 * spam email classification (machine learning model to classify emails as spam or non-spam w/ naive bayes or logical regression)
 * ai-based password cracking
 
-
 ### 2025-16-05 - Topic Refinement
 Researched code obfuscation and audio steganography during the period.
 
