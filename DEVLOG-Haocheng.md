@@ -14,5 +14,8 @@ Brainstormed project ideas with Tamiyyah. Researched, discussed, and  submitted 
 
 Replied to Mr. K's proposal feedback after discussing with Tamiyyah.
 
-### 2024-01-03 - Brief description
+### 2025-16-05 - Topic Refinement
+Researched code obfuscation and audio steganography during the period.
 
+### 2025-19-05 - Topic Refinement
+Researched code obfuscation and audio steganography some more, decided on code obfuscation.
