@@ -2,7 +2,7 @@
 
 ## Group Members:
 
-names here.(CHANGE THIS!!!!!)
+Haocheng Huang and Tamiyyah Shafiq
        
 # Intentions:
 
