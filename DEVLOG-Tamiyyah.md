@@ -17,3 +17,6 @@ Researched code obfuscation and audio steganography during the period.
 
 ### 2025-19-05 - Topic Refinement
 Researched code obfuscation and audio steganography some more, decided on code obfuscation.
+
+### 2025-20-05 - GitHub Repo Update
+Caught up on GitHub setup and made initial commits. Behind on daily updates, so added missing logs and pushed current progress to the repo. Spent half a period doing this, the rest doing more research and discussing with Haocheng. Mapped out on paper different methods we could implement.
