@@ -19,3 +19,6 @@ Researched code obfuscation and audio steganography during the period.
 
 ### 2025-19-05 - Topic Refinement
 Researched code obfuscation and audio steganography some more, decided on code obfuscation.
+
+### 2025-20-05 - Started Presentation Slides
+Began drafting the presentation slides. Outlined the main sections and added initial content. Spent a period doing this.
