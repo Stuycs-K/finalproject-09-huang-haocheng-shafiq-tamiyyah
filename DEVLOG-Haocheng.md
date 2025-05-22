@@ -24,4 +24,4 @@ Researched code obfuscation and audio steganography some more, decided on code o
 Began drafting the presentation slides. Outlined the main sections and added initial content. Spent a period doing this.
 
 ### 2025-21-05 - Presentation Slides
-Continued working on the presentation slides. Spent a period doing this.
+Continued working on the presentation slides and researching code obfuscation. Spent a period doing this.
