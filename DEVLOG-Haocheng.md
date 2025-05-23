@@ -25,3 +25,7 @@ Began drafting the presentation slides. Outlined the main sections and added ini
 
 ### 2025-21-05 - Presentation Slides
 Continued working on the presentation slides and researching code obfuscation. Spent a period doing this.
+
+### 2025-21-05 - Continued Research
+Continued researching code obfuscation. Looked at Wikipedia page and some scholarly articles about the topic (eg. *A Box, Darkly:
+Obfuscation, Weird Languages, and Code Aesthetics* by Michael Mateas and Nick Montfort).
