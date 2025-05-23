@@ -28,4 +28,5 @@ Continued working on the presentation slides and researching code obfuscation. S
 
 ### 2025-21-05 - Continued Research
 Continued researching code obfuscation. Looked at Wikipedia page and some scholarly articles about the topic (eg. *A Box, Darkly:
-Obfuscation, Weird Languages, and Code Aesthetics* by Michael Mateas and Nick Montfort).
+Obfuscation, Weird Languages, and Code Aesthetics* by Michael Mateas and Nick Montfort, *Mechanisms for Source Code Obfuscation in C:
+Novel Techniques and Implementation*).
