@@ -1,3 +1,9 @@
 vara=1
 varB = 3
 varc = 3
+vara
+
+varB
+varc
+
+bla bla
