@@ -37,4 +37,4 @@ def replaceNames(file):
 replaceNames("testingCodeFiles/crack.py")
 
 # TODO current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
-# TODO add mapping file
+# TODO test mapping file
