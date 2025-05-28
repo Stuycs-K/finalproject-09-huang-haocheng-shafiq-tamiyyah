@@ -1,4 +1,4 @@
-import re
+import re, secrets, string, random
 
 def findVarNames(file):
     file = open(file, 'r')  # opens file and reads it
@@ -20,12 +20,12 @@ def replaceVarNames(file):
     file.close()
 
     for i in varNames:
-        code = code.replace(i, "AAAAH")
+        length = random.randint(3, 10)
+        newVarName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length))
+        code = code.replace(i, newVarName)
     
     print(code)
     return code
-
-
 
 replaceVarNames("testingCodeFiles/code.txt")
 
