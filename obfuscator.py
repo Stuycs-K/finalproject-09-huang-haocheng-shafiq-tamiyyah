@@ -12,10 +12,13 @@ def findNames(file):
         names[i] = names[i].rstrip(" =")
         names[i] = names[i].lstrip("def ")
 
+    names = list(set(names)) # unique names
     return names
 
 def replaceNames(file):
     names = findNames(file)
+
+    map = {}
 
     file = open(file, 'r')  # opens file and reads it
     code = file.read()
@@ -25,10 +28,13 @@ def replaceNames(file):
         length = random.randint(3, 10) # random length for the new variable name
         newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
         code = code.replace(i, newName)
+        map[i] = newName
     
     print(code)
+    print(map)
     return code
 
 replaceNames("testingCodeFiles/crack.py")
 
 # TODO current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
+# TODO add mapping file
