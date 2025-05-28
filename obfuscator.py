@@ -31,4 +31,4 @@ def replaceNames(file):
 
 replaceNames("testingCodeFiles/crack.py")
 
-# current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
+# TODO current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
