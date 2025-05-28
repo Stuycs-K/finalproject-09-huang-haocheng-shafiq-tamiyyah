@@ -14,9 +14,22 @@ def findVarNames(file):
     for i in range(len(varNames)): # gets rid of the = in my list
         varNames[i] = varNames[i].rstrip(" =")
 
-    print(varNames)
     return varNames
 
+def replaceVarNames(file):
+    varNames = findVarNames(file)
 
-findVarNames("testingCodeFiles/crack.py")
+    file = open(file, 'r')  # opens file and reads it
+    code = file.read()
+    file.close()
+
+    for i in varNames:
+        code = code.replace(i, "AAAAH")
+    
+    print(code)
+    return code
+
+
+
+replaceVarNames("testingCodeFiles/code.txt")
 
