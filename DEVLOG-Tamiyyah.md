@@ -23,3 +23,6 @@ Caught up on GitHub setup and made initial commits. Behind on daily updates, so 
 
 ### 2025-27-05 - Research and Planning Out Coding Component
 Added some more to the slides and started to plan out the different obfuscation methods we could code. Discussed with Mr. K. Going to likely add one methods at a time -- name obfuscation, dummy/junk code, string encryption, compressing code -- and see how much we get through.
+
+### 2025-28-05 - Started coding
+Coded replace variable names and replace function names.
