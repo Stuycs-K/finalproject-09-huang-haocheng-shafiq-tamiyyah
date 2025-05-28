@@ -20,12 +20,13 @@ def replaceVarNames(file):
     file.close()
 
     for i in varNames:
-        length = random.randint(3, 10)
-        newVarName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length))
+        length = random.randint(3, 10) # random length for the new variable name
+        newVarName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
         code = code.replace(i, newVarName)
     
     print(code)
     return code
 
-replaceVarNames("testingCodeFiles/code.txt")
+replaceVarNames("testingCodeFiles/crack.py")
 
+# current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
