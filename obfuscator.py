@@ -1,32 +1,34 @@
 import re, secrets, string, random
 
-def findVarNames(file):
+def findNames(file):
     file = open(file, 'r')  # opens file and reads it
     code = file.read()
-    varNames = re.findall(r'[A-Za-z]+ =', code) # finds everything preceding a =
-    varNames += re.findall(r'[A-Za-z]+=', code) # finds everything preceding a = w/o space
+    names = re.findall(r'[A-Za-z]+ =', code) # finds variable names preceding a =
+    names += re.findall(r'[A-Za-z]+=', code) # finds variable names preceding a = w/o space
+    names += re.findall(r'def [A-Za-z]+', code) # find function names
     file.close()
 
-    for i in range(len(varNames)): # gets rid of the = in my list
-        varNames[i] = varNames[i].rstrip(" =")
+    for i in range(len(names)): # gets rid of the = in my list
+        names[i] = names[i].rstrip(" =")
+        names[i] = names[i].lstrip("def ")
 
-    return varNames
+    return names
 
-def replaceVarNames(file):
-    varNames = findVarNames(file)
+def replaceNames(file):
+    names = findNames(file)
 
     file = open(file, 'r')  # opens file and reads it
     code = file.read()
     file.close()
 
-    for i in varNames:
+    for i in names:
         length = random.randint(3, 10) # random length for the new variable name
-        newVarName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
-        code = code.replace(i, newVarName)
+        newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
+        code = code.replace(i, newName)
     
     print(code)
     return code
 
-replaceVarNames("testingCodeFiles/crack.py")
+replaceNames("testingCodeFiles/crack.py")
 
 # current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
