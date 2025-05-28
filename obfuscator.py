@@ -1,9 +1,5 @@
 import re
 
-	# content = re.findall(r'[A-Za-z]+', content)
-	# content = ''.join(content)
-
-
 def findVarNames(file):
     file = open(file, 'r')  # opens file and reads it
     code = file.read()
