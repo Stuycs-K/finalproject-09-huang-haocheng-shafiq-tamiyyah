@@ -1,4 +1,4 @@
-import re, secrets, string, random
+import re, secrets, string, random, encode
 
 
 def findNames(file):
@@ -32,8 +32,9 @@ def replaceNames(file, output):
 
 
    for i in names:
-       length = random.randint(3, 10) # random length for the new variable name
-       newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
+    #    length = random.randint(3, 10) # random length for the new variable name
+    #    newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
+       newName = encode.encode(i, "hao")
        code = code.replace(i, newName)
        map[i] = newName
 
