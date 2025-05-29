@@ -26,3 +26,6 @@ Added some more to the slides and started to plan out the different obfuscation 
 
 ### 2025-28-05 - Started coding
 Coded replace variable names and replace function names.
+
+### 2025-29-05 - Pair programmed code
+Added vigenere cipher function for name change obfuscation.
