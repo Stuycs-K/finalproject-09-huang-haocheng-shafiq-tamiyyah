@@ -39,3 +39,7 @@ Coded process for outputting dictionary to file. Discussed further plans for cod
 
 ### 2025-29-05 - Pair programmed code
 Added vigenere cipher function for name change obfuscation.
+
+### 2025-30-05 - Pair programmed code
+Worked on implementing functions that remove newlines and spaces from the code file
+
