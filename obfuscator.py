@@ -1,6 +1,5 @@
 import re, secrets, string, random, encode
 
-
 def findNames(file):
    file = open(file, 'r')  # opens file and reads it
    code = file.read()
