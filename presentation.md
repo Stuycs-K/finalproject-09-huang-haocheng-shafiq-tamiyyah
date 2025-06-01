@@ -20,7 +20,7 @@ Developers of:
 
 ### where:
 Not every language is easy to obfuscate
-Some languages, like Java, C, and C++, are easy to obfuscate because they compile to bytecode or machine code, which gives more room for obfuscation techniques since the source code is less accessible
+Some languages, like Java, C, and C++, are easy to obfuscate because they compile to bytecode or machine code, which gives more room for obfuscation techniques since the source code is less accessible\n
 Other languages like Python is hard to obfuscate because it prioritizes being readable and using common obfuscation techniques results in code that can still be easily interpreted
 ### when and why:
 - before releasing software or scripts to the public
