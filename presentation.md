@@ -57,3 +57,12 @@ And more
 - **Python**: PyArmor, Nuitka (partial obfuscation), Cython
 
 ### Is Obfuscation enough?
+The short answer is no.
+Obfuscation is simply a deterrent, and it doesn't stop reverse engineering, but only slows it.
+Obfuscation can usually be easily identified and skilled attackers can crack it if they REALLY wanted to, but it just takes longer.
+
+Obfuscation is a layer of protection and (if your code seriously needs protecting) it should be combined with other methods like:
+
+- encryption
+- code signing (verifying that code hasn't been tampered)
+- anti-debugging and tamper checks (to detect tools like debuggers or emulators)
