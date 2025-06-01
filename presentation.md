@@ -33,7 +33,8 @@ Other languages like Python is hard to obfuscate because it prioritizes being re
 
 - **Identifier renaming**
 	renaming variables, classes, and functions to meaningless or misleading names
-	eg. getName() -> al3J4Nj()
+
+	eg. `getName()` -> `al3J4Nj()`
 - **Control flow obfuscation**
 	restructuring code to change execution order and make the logical flow appear confusing for readers
 - **String encryption**
