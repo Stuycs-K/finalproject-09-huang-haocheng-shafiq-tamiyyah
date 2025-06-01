@@ -43,3 +43,5 @@ Added vigenere cipher function for name change obfuscation.
 ### 2025-30-05 - Pair programmed code
 Worked on implementing functions that remove newlines and spaces from the code file
 
+### 2025-01-06 - Added presentation.md
+Converted Google Docs format to .md format, added more information, and added to repo
