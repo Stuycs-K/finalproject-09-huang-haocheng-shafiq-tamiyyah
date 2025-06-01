@@ -1,6 +1,7 @@
 
 
 
+
 ## Code Obfuscation
 
 ### who:
@@ -48,3 +49,11 @@ Other languages like Python is hard to obfuscate because it prioritizes being re
 	```if (((123 * 123) % 2 == 1) && user.isLoggedIn)```
 	
 And more
+### common tools
+
+- **JavaScript**: Obfuscator.io, UglifyJS
+- **Java**: ProGuard, DashO
+- **.NET**: ConfuserEx, Dotfuscator
+- **Python**: PyArmor, Nuitka (partial obfuscation), Cython
+
+### Is Obfuscation enough?
