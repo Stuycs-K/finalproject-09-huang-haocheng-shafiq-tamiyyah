@@ -45,6 +45,7 @@ Other languages like Python is hard to obfuscate because it prioritizes being re
 	code that changes itself at runtime which is extremely difficult to trace
 - **Opaque Predicates**
 	replacing True/False statements with conditions that always evaluate to True/False
+
 	eg.
 	```if (user.isLoggedIn)```->
 	```if (((123 * 123) % 2 == 1) && user.isLoggedIn)```
