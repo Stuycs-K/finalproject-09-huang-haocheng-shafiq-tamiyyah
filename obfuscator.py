@@ -86,6 +86,9 @@ def findNewLines(file):
    file = open(file, 'r')
    code = file.read()
 
+   lines = re.findall(r'[A-Za-z_][A-Za-z0-9_]* =', code) # finds variable names preceding a =
+
+
 #findNames("testingCodeFiles/crack.py")
 findSpaces("testingCodeFiles/crack.py")
 #replaceNames("testingCodeFiles/crack.py", "output.txt", sys.argv[1], sys.argv[2])
