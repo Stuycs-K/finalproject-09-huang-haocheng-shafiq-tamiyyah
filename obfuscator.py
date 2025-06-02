@@ -116,10 +116,10 @@ def deadCode(file):
 
 
   deadRet = "if " + str(random.randint(3, 10)) + " == " + "0" + ":" + "\n\t\t" + "return " + newName
+  deadIf = "if " + "(" + str(random.randint(3, 999)) + " + " + str(random.randint(1,999)) + ")" + "^2" " == " + "-1" + ":" + "\n\t\t" + "return " + newName
 
-
-  code = re.sub(r'(return\s+\w+)', lambda match: f'{match.group(0)}\n\t{deadRet}', code)
-
+  #code = re.sub(r'(return\s+\w+)', lambda match: f'{match.group(0)}\n\t{deadRet}', code)
+  code = re.sub(r'(\bif\s+.+?:)', lambda match: f'{match.group(0)}\n\t{deadIf}', code)
 
   print(code)
   return code
