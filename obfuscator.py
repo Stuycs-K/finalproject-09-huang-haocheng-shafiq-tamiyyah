@@ -14,11 +14,13 @@ def findNames(file):
          names[i] = names[i].lstrip("def ")
 
    names = list(set(names)) # unique names
-   print(names)
+   #print(names)
    return names
 
 def replaceNames(file, output, version, key=None): # -v is vigenere, -m is random mapping, -s is random seed
    names = findNames(file)
+   
+   output = open(output, 'w')
 
    if version == "-m":
       print("Random mapping mode.")
@@ -33,7 +35,7 @@ def replaceNames(file, output, version, key=None): # -v is vigenere, -m is rando
       if key is None or key == "None" or key == "":
          raise ValueError("Seed mode requires a key.")
       map = {}
-      map["key"] = key
+      output.write("key: " + key)
    else:
       raise ValueError("Please enter valid key.")
 
@@ -45,7 +47,7 @@ def replaceNames(file, output, version, key=None): # -v is vigenere, -m is rando
       if version == "-m":
          length = random.randint(3, 10) # random length for the new variable name
          newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
-         map[newName] = i
+         map[i] = newName
          code = code.replace(i, newName)
       if version == "-v":
          newName = encode.encode(i, key)
@@ -54,13 +56,15 @@ def replaceNames(file, output, version, key=None): # -v is vigenere, -m is rando
          random.seed(i + key)
          length = random.randint(3, 10) # random length for the new variable name
          newName = ''.join(random.choice(string.ascii_letters) for _ in range(4))
-         print(newName)
+         code = code.replace(i, newName)
+         #print(newName)
          map[i] = length
 
-   output = open(output, 'w')
+   
    output.write(str(map))
   
    print(code)
+   #print(output)
    print(map)
    return code
 
@@ -68,6 +72,23 @@ def findSpaces(file):
    file = open(file, 'r')
    code = file.read()
 
-replaceNames("testingCodeFiles/crack.py", "output.txt", sys.argv[1], sys.argv[2])
+   symbols = ["=", "%", "<", ">", "≤", "≥", "=", ","]
+
+   for i in symbols:
+      code = code.replace(" " + i + " ", i)
+      code = code.replace(" " + i, i)
+      code = code.replace(i + " ", i)
+
+   print(code)
+   return code
+
+def findNewLines(file):
+   file = open(file, 'r')
+   code = file.read()
+
+#findNames("testingCodeFiles/crack.py")
+findSpaces("testingCodeFiles/crack.py")
+#replaceNames("testingCodeFiles/crack.py", "output.txt", sys.argv[1], sys.argv[2])
 # TODO current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
 # TODO test mapping file
+# TODO change () variables too
