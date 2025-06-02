@@ -29,3 +29,6 @@ Coded replace variable names and replace function names.
 
 ### 2025-29-05 - Pair programmed code
 Added vigenere cipher function for name change obfuscation.
+
+### 2025-02-06 - pair programming
+Added modes for running program, wrote a more efficient version of FindSpaces, debugged other modes, implemented function to remove all empty lines, implemented function to add dead code.
