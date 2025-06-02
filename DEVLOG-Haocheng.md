@@ -45,3 +45,6 @@ Worked on implementing functions that remove newlines and spaces from the code f
 
 ### 2025-01-06 - Added presentation.md
 Converted Google Docs format to .md format, added more information, and added to repo
+
+### 2025-02-06 - pair programming
+Added modes for running program, wrote a more efficient version of FindSpaces, debugged other modes, implemented function to remove all empty lines, implemented function to add dead code.
