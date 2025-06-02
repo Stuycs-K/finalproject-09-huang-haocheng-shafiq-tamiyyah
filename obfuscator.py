@@ -70,7 +70,7 @@ def replaceNames(file, output, version, key=None): # -v is vigenere, -m is rando
 
  
   output.write(str(map))
-   print(code)
+  print(code)
   #print(output)
   print(map)
   return code
