@@ -85,12 +85,14 @@ def findSpaces(file):
 def findNewLines(file):
    file = open(file, 'r')
    code = file.read()
-
-   lines = re.findall(r'[A-Za-z_][A-Za-z0-9_]* =', code) # finds variable names preceding a =
-
+   code = re.sub(r'^\s*\n', '', code, flags=re.MULTILINE)
+   #lines = re.findall(r'[A-Za-z_][A-Za-z0-9_]* =', code) # finds variable names preceding a =
+   print(code)
+   return code
 
 #findNames("testingCodeFiles/crack.py")
-findSpaces("testingCodeFiles/crack.py")
+#findSpaces("testingCodeFiles/crack.py")
+findNewLines("testingCodeFiles/crack.py")
 #replaceNames("testingCodeFiles/crack.py", "output.txt", sys.argv[1], sys.argv[2])
 # TODO current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
 # TODO test mapping file
