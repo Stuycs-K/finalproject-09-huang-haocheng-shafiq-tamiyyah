@@ -15,22 +15,29 @@ def findNames(file):
    names = list(set(names)) # unique names
    return names
 
-def replaceNames(file, output):
+def replaceNames(file, output, version, key=None): # -v is vigenere, -m is random mapping, -s is random seed
    names = findNames(file)
 
-   map = {}
+   if version == "-m":
+      map = {}
+   if version == "-v":
+      if key is None:
+         raise ValueError("Vigenère mode requires a key.")
+      map = key
 
    file = open(file, 'r')  # opens file and reads it
    code = file.read()
    file.close()
 
-
    for i in names:
-    #    length = random.randint(3, 10) # random length for the new variable name
-    #    newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
-       newName = encode.encode(i, "hao")
-       code = code.replace(i, newName)
-       map[i] = newName
+      if version == "-m":
+         length = random.randint(3, 10) # random length for the new variable name
+         newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
+         map[i] = newName
+         code = code.replace(i, newName)
+      if version == "-v":
+         newName = encode.encode(i, "hao")
+         code = code.replace(i, newName)
 
    output = open(output, 'w')
    output.write(str(map))
