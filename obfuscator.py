@@ -80,19 +80,38 @@ def findSpaces(file):
       code = code.replace(i + " ", i)
 
    print(code)
+   file.close()
    return code
 
 def findNewLines(file):
    file = open(file, 'r')
    code = file.read()
+   file.close()
    code = re.sub(r'^\s*\n', '', code, flags=re.MULTILINE)
    #lines = re.findall(r'[A-Za-z_][A-Za-z0-9_]* =', code) # finds variable names preceding a =
    print(code)
    return code
 
+def deadCode(file):
+   file = open(file, 'r')
+   code = file.read()
+   file.close()
+
+   length = random.randint(3, 10) # random length for the new variable name
+   newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
+
+   deadRet = "if " + str(random.randint(3, 10)) + " == " + "0" + ":" + "\n\t\t" + "return " + newName
+
+   code = re.sub(r'(return\s+\w+)', lambda match: f'{match.group(0)}\n\t{deadRet}', code)
+   code = re.sub(r'(if\s+\w+)', lambda match: f'{match.group(0)}\n\t{deadRet}', code)
+
+   print(code)
+   return code
+
 #findNames("testingCodeFiles/crack.py")
 #findSpaces("testingCodeFiles/crack.py")
-findNewLines("testingCodeFiles/crack.py")
+#findNewLines("testingCodeFiles/crack.py")
+deadCode("testingCodeFiles/crack.py")
 #replaceNames("testingCodeFiles/crack.py", "output.txt", sys.argv[1], sys.argv[2])
 # TODO current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
 # TODO test mapping file
