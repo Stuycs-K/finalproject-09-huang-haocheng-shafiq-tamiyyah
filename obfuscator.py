@@ -94,20 +94,6 @@ def findSpaces(file):
   file.close()
   return code
 
-<<<<<<< HEAD
-   print(code)
-   file.close()
-   return code
-
-def findNewLines(file):
-   file = open(file, 'r')
-   code = file.read()
-   file.close()
-   code = re.sub(r'^\s*\n', '', code, flags=re.MULTILINE)
-   #lines = re.findall(r'[A-Za-z_][A-Za-z0-9_]* =', code) # finds variable names preceding a =
-   print(code)
-   return code
-=======
 
 def findNewLines(file):
   file = open(file, 'r')
@@ -138,23 +124,6 @@ def deadCode(file):
   print(code)
   return code
 
->>>>>>> a98119207fb214c929f8ef8375e16e6da7b2d1aa
-
-def deadCode(file):
-   file = open(file, 'r')
-   code = file.read()
-   file.close()
-
-   length = random.randint(3, 10) # random length for the new variable name
-   newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
-
-   deadRet = "if " + str(random.randint(3, 10)) + " == " + "0" + ":" + "\n\t\t" + "return " + newName
-
-   code = re.sub(r'(return\s+\w+)', lambda match: f'{match.group(0)}\n\t{deadRet}', code)
-   code = re.sub(r'(if\s+\w+)', lambda match: f'{match.group(0)}\n\t{deadRet}', code)
-
-   print(code)
-   return code
 
 #findNames("testingCodeFiles/crack.py")
 #findSpaces("testingCodeFiles/crack.py")
@@ -164,5 +133,4 @@ deadCode("testingCodeFiles/crack.py")
 # TODO current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
 # TODO test mapping file
 # TODO change () variables too
-
 
