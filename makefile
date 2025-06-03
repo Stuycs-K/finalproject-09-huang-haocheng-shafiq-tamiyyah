@@ -1,5 +1,5 @@
 run:
-	@python3 obfuscate.py $(ARGS)
+	@python3 obfuscator.py $(ARGS)
 
 run-lazy:
-	@python3 obfuscate.py testingCodeFiles/testInput.py output.txt -v None
+	@python3 obfuscator.py testingCodeFiles/testInput.py output.txt -v None
