@@ -104,18 +104,21 @@ def makeDeadRet():
    length = random.randint(3, 10) # random length for the new variable name
    newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
    deadRet = "if " + str(random.randint(3, 10)) + " == " + "0" + ":" + " return \"" + newName + "\"" + ";"
-   code = re.sub(r'^(\s*)(return\s+.+)', lambda match: f'{match.group(0)}\n{match.group(1)}{deadRet}', code, flags=re.MULTILINE)
+   return deadRet
    
-def makeDeadRet():
+def makeDeadif():
    length = random.randint(3, 10) # random length for the new variable name
    newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
    deadIf = "if " + "(" + str(random.randint(3, 999)) + " + " + str(random.randint(1,999)) + ")" + "**2" " == " + "-1" + ":" + " " + "return \"" + newName + "\";"
-   code = re.sub(r'(\s*)(?<!el)(if\s+.+?:)', lambda match: f'{match.group(0)}{match.group(1)}{getIndentUnit(match.group(1))}{deadIf}', code)
+   return deadIf
 
 def deadCode(file):
   file = open(file, 'r')
   code = file.read()
   file.close()
+
+  code = re.sub(r'(\s*)(?<!el)(if\s+.+?:)', lambda match: f'{match.group(0)}{match.group(1)}{getIndentUnit(match.group(1))}{makeDeadif()}', code)
+  code = re.sub(r'^(\s*)(return\s+.+)', lambda match: f'{match.group(0)}\n{match.group(1)}{makeDeadRet()}', code, flags=re.MULTILINE)
 
   print(code)
   return code

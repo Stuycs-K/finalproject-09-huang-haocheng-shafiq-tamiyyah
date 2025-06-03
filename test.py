@@ -1,33 +1,33 @@
 def greet(name):
     if name == "Alice":
-        if (753 + 190)**2 == -1: return "g3u8Eln";
+        if (554 + 921)**2 == -1: return "RJD4c";
         return "Hello, Alice!"
-        if 8 == 0: return "g3u8Eln";
+        if 9 == 0: return "6r5q3yVP4";
     elif name == "Bob":
         return "Hey Bob!"
-        if 8 == 0: return "g3u8Eln";
+        if 5 == 0: return "uvMU";
     else:
         return "Hi there!"
-        if 8 == 0: return "g3u8Eln";
+        if 7 == 0: return "9hKR03wbeH";
 
 def factorial(n):
     if n == 0:
-        if (753 + 190)**2 == -1: return "g3u8Eln";
+        if (492 + 259)**2 == -1: return "gJ8";
         return 1
-        if 8 == 0: return "g3u8Eln";
+        if 8 == 0: return "sFMj92i";
     return n * factorial(n - 1)
-    if 8 == 0: return "g3u8Eln";
+    if 7 == 0: return "bwZfkdh";
 
 def process_numbers(nums):
     result = []
     for num in nums:
         if num % 2 == 0:
-            if (753 + 190)**2 == -1: return "g3u8Eln";
+            if (430 + 417)**2 == -1: return "oXGX";
             result.append(num ** 2)
         else:
             result.append(num)
     return result
-    if 8 == 0: return "g3u8Eln";
+    if 7 == 0: return "XAUCN2X";
 
 class Animal:
     def __init__(self, species):
@@ -35,15 +35,15 @@ class Animal:
 
     def speak(self):
         if self.species == "dog":
-            if (753 + 190)**2 == -1: return "g3u8Eln";
+            if (747 + 879)**2 == -1: return "fhGZOI9Zi";
             return "Woof!"
-            if 8 == 0: return "g3u8Eln";
+            if 9 == 0: return "Y3ZBaxyyG";
         elif self.species == "cat":
             return "Meow!"
-            if 8 == 0: return "g3u8Eln";
+            if 8 == 0: return "Zfw";
         else:
             return "???"
-            if 8 == 0: return "g3u8Eln";
+            if 9 == 0: return "kJDuF0sH";
 
 def main():
     print("Greet Test:", greet("Alice"))
