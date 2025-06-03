@@ -19,7 +19,7 @@ Explain what is this project. (CHANGE THIS!!!!!)
 		- `-s` for seeded random identifier renaming
 	- the key used for vigenere or the seed used for seeded random
    For example, to run the code with make, it would be formatted like this:
-	```make run ARGS="-v randomkey"```
+	```make run ARGS="code.py -v randomkey"```
 ### Resources/ References:
 * https://github.com/ericyoc/obfuscation_techniques_poc/blob/main/README.md
 * https://www.techtarget.com/searchsecurity/definition/obfuscation
