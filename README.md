@@ -11,9 +11,15 @@ Explain what is this project. (CHANGE THIS!!!!!)
   
 ### Instructions:
 
-How does the user install/compile/run the program. (CHANGE THIS!!!!!)
-How does the user interact with this program? (CHANGE THIS!!!!!)
-
+1. Have the required program files: the `makefile`, `encode.py`, and `obfuscator.py`, as well as a python program that you want to obfuscate in the same directory.
+2. Use `make run` to run the program, but make sure to include the following arguments:
+	- to pick a obfuscation version, use one of the following flags 
+		- `-m` for random mapping identifier renaming
+		- `-v` for vigenere identifier renaming
+		- `-s` for seeded random identifier renaming
+	- the key used for vigenere or the seed used for seeded random
+   For example, to run the code with make, it would be formatted like this:
+	```make run ARGS="-v randomkey"```
 ### Resources/ References:
 * https://github.com/ericyoc/obfuscation_techniques_poc/blob/main/README.md
 * https://www.techtarget.com/searchsecurity/definition/obfuscation
