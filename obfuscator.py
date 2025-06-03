@@ -92,29 +92,38 @@ def findNewLines(file):
    print(code)
    return code
 
+def getIndentUnit(s):
+    if s.startswith('\t'):
+        return '\t'
+    elif s.startswith(' '):
+        return ' ' * (len(s))
+    else:
+        return '    '
+  
+def makeDeadRet():
+   length = random.randint(3, 10) # random length for the new variable name
+   newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
+   deadRet = "if " + str(random.randint(3, 10)) + " == " + "0" + ":" + " return \"" + newName + "\"" + ";"
+   code = re.sub(r'^(\s*)(return\s+.+)', lambda match: f'{match.group(0)}\n{match.group(1)}{deadRet}', code, flags=re.MULTILINE)
+   
+def makeDeadRet():
+   length = random.randint(3, 10) # random length for the new variable name
+   newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
+   deadIf = "if " + "(" + str(random.randint(3, 999)) + " + " + str(random.randint(1,999)) + ")" + "**2" " == " + "-1" + ":" + " " + "return \"" + newName + "\";"
+   code = re.sub(r'(\s*)(?<!el)(if\s+.+?:)', lambda match: f'{match.group(0)}{match.group(1)}{getIndentUnit(match.group(1))}{deadIf}', code)
+
 def deadCode(file):
   file = open(file, 'r')
   code = file.read()
   file.close()
 
-  length = random.randint(3, 10) # random length for the new variable name
-  newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
-
-  deadRet = "if " + str(random.randint(3, 10)) + " == " + "0" + ":" + "\n\t\t" + "return \"" + newName + "\""
-  deadIf = "if " + "(" + str(random.randint(3, 999)) + " + " + str(random.randint(1,999)) + ")" + "**2" " == " + "-1" + ":" + " " + "return \"" + newName + "\";"
-
-  #code = re.sub(r'(return\s+\w+)', lambda match: f'{match.group(0)}\n\t{deadRet}', code)
-  code = re.sub(r'(\s*)(if\s+.+?:)', lambda match: f'{match.group(0)} {deadIf}', code)
-  #code = re.sub(r'(if\s+(.+):\s*$)', lambda match: f'{match.group(0)}\n\t{deadIf}', code)
-
   print(code)
   return code
-
 
 #findNames("testingCodeFiles/crack.py")
 #findSpaces("testingCodeFiles/crack.py")
 #findNewLines("testingCodeFiles/crack.py")
-deadCode("testingCodeFiles/touch.py")
+deadCode("testingCodeFiles/testInput.py")
 #replaceNames("testingCodeFiles/crack.py", "output.txt", sys.argv[1], sys.argv[2])
 # TODO current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
 # TODO test mapping file

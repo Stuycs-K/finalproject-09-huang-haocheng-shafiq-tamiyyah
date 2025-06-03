@@ -82,7 +82,7 @@ def freqF(filename):
         retArray[alphabet.index(letter)] = count/len(text)
     return retArray
 
-english_frequency = freqF("alice_in_wonderland.txt")
+english_frequency = freqF("output.txt")
 message_frequency = freqF(sys.argv[1])
 
 def distance(arrayOne, arrayTwo):
