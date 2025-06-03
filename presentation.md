@@ -7,7 +7,7 @@
 ### who:
 
 Developers of:
-- Commertial Software - to protect intellectual property
+- Commercial Software - to protect intellectual property
 - Malware - to conceal malicious behavior and avoid detection
 - Games - to prevent reverse engineering
 - Cybersecurity tools - also to prevent reverse engineering and protect sensitive logic
