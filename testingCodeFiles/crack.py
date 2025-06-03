@@ -17,7 +17,7 @@ def getKey(text):
         dista = distance(english_frequency, freq(decoded))
         #print(i)
         #print(dista)
-        if dista == dist:
+        if dista == dist: 
             extra = ""
         if dista < dist:
             dist = dista
