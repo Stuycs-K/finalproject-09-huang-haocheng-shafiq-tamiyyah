@@ -13,3 +13,5 @@ run-lazy:
 	@python3 obfuscator.py testingCodeFiles/testInput.py -v achilles
 	@echo "\nRUNNING RESULTANT OBFUSCATED CODE\n"
 	@python3 result.py
+	@echo "\nRUNNING ORIGINAL CODE\n"
+	@python3 testingCodeFiles/testInput.py
