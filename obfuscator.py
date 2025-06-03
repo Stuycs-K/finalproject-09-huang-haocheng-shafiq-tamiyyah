@@ -60,6 +60,7 @@ def replaceNames(file, output, version, key=None): # -v is vigenere, -m is rando
          #print(newName)
          map[i] = length
 
+<<<<<<< HEAD
    
    output.write(str(map))
   
@@ -67,6 +68,38 @@ def replaceNames(file, output, version, key=None): # -v is vigenere, -m is rando
    #print(output)
    print(map)
    return code
+=======
+  file = open(file, 'r')  # opens file and reads it
+  code = file.read()
+  file.close()
+
+
+  for i in names:
+     if version == "-m":
+        length = random.randint(3, 10) # random length for the new variable name
+        newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
+        map[i] = newName
+        code = code.replace(i, newName)
+     if version == "-v":
+        newName = encode.encode(i, key)
+        code = code.replace(i, newName)
+     if version == "-s":
+        random.seed(i + key)
+        length = random.randint(3, 10) # random length for the new variable name
+        newName = ''.join(random.choice(string.ascii_letters) for _ in range(4))
+        code = code.replace(i, newName)
+        #print(newName)
+        map[i] = length
+
+
+ 
+  output.write(str(map))
+  print(code)
+  #print(output)
+  print(map)
+  return code
+
+>>>>>>> b721d1a74854c2073568c9cce54f635edcfeff66
 
 def findSpaces(file):
    file = open(file, 'r')
@@ -79,6 +112,7 @@ def findSpaces(file):
       code = code.replace(" " + i, i)
       code = code.replace(i + " ", i)
 
+<<<<<<< HEAD
    print(code)
    file.close()
    return code
@@ -108,6 +142,49 @@ def deadCode(file):
 
    print(code)
    return code
+=======
+
+  for i in symbols:
+     code = code.replace(" " + i + " ", i)
+     code = code.replace(" " + i, i)
+     code = code.replace(i + " ", i)
+
+
+  print(code)
+  file.close()
+  return code
+
+
+def findNewLines(file):
+  file = open(file, 'r')
+  code = file.read()
+  file.close()
+  code = re.sub(r'^\s*\n', '', code, flags=re.MULTILINE)
+  #lines = re.findall(r'[A-Za-z_][A-Za-z0-9_]* =', code) # finds variable names preceding a =
+  print(code)
+  return code
+
+
+def deadCode(file):
+  file = open(file, 'r')
+  code = file.read()
+  file.close()
+
+
+  length = random.randint(3, 10) # random length for the new variable name
+  newName = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length)) # random string
+
+
+  deadRet = "if " + str(random.randint(3, 10)) + " == " + "0" + ":" + "\n\t\t" + "return " + newName
+  deadIf = "if " + "(" + str(random.randint(3, 999)) + " + " + str(random.randint(1,999)) + ")" + "^2" " == " + "-1" + ":" + "\n\t\t" + "return " + newName
+
+  #code = re.sub(r'(return\s+\w+)', lambda match: f'{match.group(0)}\n\t{deadRet}', code)
+  code = re.sub(r'(\bif\s+.+?:)', lambda match: f'{match.group(0)}\n\t{deadIf}', code)
+
+  print(code)
+  return code
+
+>>>>>>> b721d1a74854c2073568c9cce54f635edcfeff66
 
 #findNames("testingCodeFiles/crack.py")
 #findSpaces("testingCodeFiles/crack.py")
@@ -116,4 +193,9 @@ deadCode("testingCodeFiles/crack.py")
 #replaceNames("testingCodeFiles/crack.py", "output.txt", sys.argv[1], sys.argv[2])
 # TODO current concerns: want to make sure that if i have a variable name reused in diff defs, it isn't an issue. i don't think it should be
 # TODO test mapping file
+<<<<<<< HEAD
 # TODO change () variables too
+=======
+# TODO change () variables too
+
+>>>>>>> b721d1a74854c2073568c9cce54f635edcfeff66
