@@ -144,7 +144,7 @@ def obfuscate(file, output, version, key=None):
    return code
 
 
-obfuscate("testingCodeFiles/testInput.py", "output.txt", "-m", "None")
+obfuscate(sys.argv[1], "output.txt", sys.argv[2], sys.argv[3])
 
 #findNames("testingCodeFiles/crack.py")
 #findSpaces("testingCodeFiles/crack.py")

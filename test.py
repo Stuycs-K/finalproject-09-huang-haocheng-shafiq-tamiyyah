@@ -1,48 +1,48 @@
-def ZNCT(MIfXVnopGU):
-    if MIfXVnopGU=="Alice":
-        if (16 + 687)**2 == -1: return "a3Wk55yLvJ";
+def aveeWlQM(SKMe):
+    if SKMe=="Alice":
+        if (925 + 256)**2 == -1: return "BBGb";
         return "Hello,Alice!"
-        if 6 == 0: return "7Vd7RB";
-    elif MIfXVnopGU=="Bob":
+        if 3 == 0: return "nHqDbH";
+    elif SKMe=="Bob":
         return "Hey Bob!"
-        if 7 == 0: return "IMOzU";
+        if 10 == 0: return "c5m12CsV";
     else:
         return "Hi there!"
-        if 4 == 0: return "5uQw";
-def factorial(pdyzXSmTyu):
-    if pdyzXSmTyu==0:
-        if (326 + 939)**2 == -1: return "RENw6";
+        if 5 == 0: return "8OPxyEzmts";
+def factorial(mOPlVVg):
+    if mOPlVVg==0:
+        if (322 + 746)**2 == -1: return "3ml1";
         return 1
-        if 5 == 0: return "89UEP";
-    return pdyzXSmTyu * factorial(pdyzXSmTyu - 1)
-    if 3 == 0: return "cakV";
-def wkS(nums):
-    eEr=[]
+        if 3 == 0: return "uhM2N";
+    return mOPlVVg * factorial(mOPlVVg - 1)
+    if 4 == 0: return "HChGs";
+def SRxn(nums):
+    lwcHVXOct=[]
     for num in nums:
         if num%2==0:
-            if (29 + 211)**2 == -1: return "l05PU";
-            eEr.append(num ** 2)
+            if (473 + 910)**2 == -1: return "O4AYB";
+            lwcHVXOct.append(num ** 2)
         else:
-            eEr.append(num)
-    return eEr
-    if 6 == 0: return "LHAXjAGp4J";
+            lwcHVXOct.append(num)
+    return lwcHVXOct
+    if 9 == 0: return "DqiE4t0x7";
 class Animal:
-    def __init__(self,NAffMcc):
-        self.NAffMcc=NAffMcc
-    def FTCsmUyL(self):
-        if self.NAffMcc=="dog":
-            if (222 + 166)**2 == -1: return "nRCD8";
+    def __init__(self,pAUBXGz):
+        self.pAUBXGz=pAUBXGz
+    def wjm(self):
+        if self.pAUBXGz=="dog":
+            if (331 + 794)**2 == -1: return "LvK7qmgwv7";
             return "Woof!"
-            if 9 == 0: return "C3Ed9Rbp";
-        elif self.NAffMcc=="cat":
+            if 3 == 0: return "S1QdtT";
+        elif self.pAUBXGz=="cat":
             return "Meow!"
-            if 8 == 0: return "hC8VcbZ";
+            if 7 == 0: return "erY3";
         else:
             return "???"
-            if 7 == 0: return "ucPuAYWno4";
-def gvIIpcjkS():
-    print("Greet Test:",ZNCT("Alice"))
+            if 5 == 0: return "ChFV8jar";
+def ZnKs():
+    print("Greet Test:",aveeWlQM("Alice"))
     print("Factorial Test:",factorial(5))
-    print("Process Numbers Test:",wkS([1,2,3,4]))
-    print("Animal Test:",Animal("cat").FTCsmUyL())
-gvIIpcjkS()
+    print("Process Numbers Test:",SRxn([1,2,3,4]))
+    print("Animal Test:",Animal("cat").wjm())
+ZnKs()
