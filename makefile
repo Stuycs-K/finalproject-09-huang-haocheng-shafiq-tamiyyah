@@ -6,8 +6,8 @@ run:
 	@python3 result.py
 
 run-lazy:
-	@echo "\ORIGGINAL CODE\n"
-	@python3 testingCodeFiles/testInput.py
+	@echo "\ORIGINAL CODE\n"
+	@echo testingCodeFiles/testInput.py
 	@echo "\nOBFUSCATED CODE\n"
 	@python3 obfuscator.py testingCodeFiles/testInput.py -v achilles > result.py
 	@python3 obfuscator.py $(ARGS) > result.py
