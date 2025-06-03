@@ -1,11 +1,15 @@
 run:
-	@echo "\n\nOBFUSCATED CODE\n\n"
+	@echo "\nOBFUSCATED CODE\n"
+	@python3 obfuscator.py $(ARGS)
 	@python3 obfuscator.py $(ARGS) > result.py
-	@echo "\n\nRUNNING RESULTANT OBFUSCATED CODE\n\n"
+	@echo "\nRUNNING RESULTANT OBFUSCATED CODE\n"
 	@python3 result.py
 
 run-lazy:
-	@echo "\n\nOBFUSCATED CODE\n\n"
+	@echo "\ORIGGINAL CODE\n"
+	@python3 testingCodeFiles/testInput.py
+	@echo "\nOBFUSCATED CODE\n"
 	@python3 obfuscator.py testingCodeFiles/testInput.py -v achilles > result.py
-	@echo "\n\nRUNNING RESULTANT OBFUSCATED CODE\n\n"
+	@python3 obfuscator.py $(ARGS) > result.py
+	@echo "\nRUNNING RESULTANT OBFUSCATED CODE\n"
 	@python3 result.py
