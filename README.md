@@ -22,8 +22,11 @@ We built a Python code obfuscator that makes scripts harder to read while keepin
 		- `-v` for vigenere identifier renaming
 		- `-s` for seeded random identifier renaming
 	- the key used for vigenere or the seed used for seeded random
-   For example, to run the code with make, it would be formatted like this:
+ 
+ For example, to run the code with make, it would be formatted like this:
 	```make run ARGS="code.py -v randomkey"```
+ 
+ Sample Runs
    - Try running ```make run ARGS="testingCodeFiles/touch.py -s key"```
    - Or, to try a default version with arguments inputted, run ```make run-lazy```
  
