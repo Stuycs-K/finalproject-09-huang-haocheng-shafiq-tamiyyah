@@ -19,7 +19,7 @@ def make_array(): #makes different sizes of array and randomly fills in X or O. 
         for j in range(size):
             random_num = random.randint(0,1)
             if random_num == 0:
-               row.append("X")
+                row.append("X")
             else: 
                 row.append("0")
         arr.append(row)
@@ -57,7 +57,7 @@ def display():
     print("Ta(N)^2: Niki Jiang, Tamiyyah Shafiq, and Nia Lam")
     start = input(colors.HEADER + "Welcome to Angry Bird airlines. " + colors.END + "Do you want to buy a seat?: yes/no ").lower()
     if start == "yes":
-         run_sim() #while loop for continous running
+        run_sim() #while loop for continous running
     elif start == "no":
         print("We are sorry to hear that. You just missed out on a once-in-a-lifetime opportunity to receive a free flight from Angry Birds airlines.")
     else:
@@ -77,20 +77,17 @@ def run_sim():
         return
     if seats > len(arr_econ):
         print("Sorry, there are not enough seats available.")
-        return
-  #  if seats > len(arr) * len(arr[0]): #error cases 
-  #      print("Sorry we do not have enough seats. Please try another airline.")
-  #      return
+        return "done"
     else: 
-        if tier == "regular": #if the tier is regular, we let the user choose their spots and it runs for as many seats they want 
-             while seats_dup > 0:
+		if tier == "regular":
+            while seats_dup > 0:
                 row = int (input("\n You have " + str(seats_dup) + " seats remaining. \n" + "\nSelect your spot. First give us the row (1, 2, 3): "))
                 col = int (input("Then give us the column (1, 2, 3): "))
                 if(place(row,col)):
                     seats_dup -= 1
                     arr[row-1][col-1] = "X"
                     print("Seat " + str(row+1) + col_to_let(col) + " has been booked.")
-        if tier == "economy": #if the user choose economy and the number of seats exceed the number of columns in a row, it will do random seating; otherwise it would do consecutive seating 
+        if tier == "economy":
             if seats > len(arr[0]):
                 for i in range(seats):
                     random_seating()
@@ -127,7 +124,7 @@ def consecutive_seating(seats):
             else:
                 count = 0;
             if count >= seats: 
-                return [i,j-seats+1] #return the coordinate of the x and y (row/col) of the first consecutive index 
+                return [i,j-seats+1]
     return [-1, -1]
             
 def col_to_let(col):

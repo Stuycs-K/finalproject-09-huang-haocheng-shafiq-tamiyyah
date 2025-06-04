@@ -128,11 +128,12 @@ def deadCode(code):
 #   code = file.read()
 #   file.close()
 
-  code = re.sub(r'(\s*)(?<!el)(if\s+.+?:)', lambda match: f'{match.group(0)}{match.group(1)}{getIndentUnit(match.group(1))}{makeDeadif()}', code)
-  code = re.sub(r'^(\s*)(return\s+.+)', lambda match: f'{match.group(0)}\n{match.group(1)}{makeDeadRet()}', code, flags=re.MULTILINE)
+#  code = re.sub(r'(\s*)(?<!el)(if\s+.+?:)', lambda match: print(f'{match.group(0)}{match.group(1)}{getIndentUnit(match.group(1))}{makeDeadif()}'), code)
+   code = re.sub(r'(\s*)(?<!el)(if\s+.+?:)', lambda match: f'{match.group(0)}{match.group(1)}{getIndentUnit(match.group(1))}{makeDeadif()}', code)
+   code = re.sub(r'^(\s*)(return\b[^\n]*)$', lambda match: f'{match.group(0)}\n{match.group(1)}{makeDeadRet()}', code)
 
 #   print(code)
-  return code
+   return code
 
 def obfuscate(file, output, version, key=None):
    code = replaceNames(file, output, version, key)

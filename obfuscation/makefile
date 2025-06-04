@@ -2,6 +2,7 @@ run:
 	@echo "\nOBFUSCATED CODE\n"
 	@python3 obfuscator.py $(ARGS)
 	@python3 obfuscator.py $(ARGS) > result.py
+	@expand -t 4 result.py | tee result.py
 	@echo "\nRUNNING RESULTANT OBFUSCATED CODE\n"
 	@python3 result.py
 
