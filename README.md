@@ -5,6 +5,10 @@
 
 Tamiyyah Shafiq and Haocheng Huang
 
+### Presentation video:
+
+https://drive.google.com/file/d/1WizShNEP6ihAnuhxXOKyx44bd_6DDPzJ/view 
+
 ### Project Description:
 
 Explain what is this project. (CHANGE THIS!!!!!)
