@@ -24,8 +24,8 @@ We built a Python code obfuscator that makes scripts harder to read while keepin
 	- the key used for vigenere or the seed used for seeded random
    For example, to run the code with make, it would be formatted like this:
 	```make run ARGS="code.py -v randomkey"```
-   Try running ```make run ARGS="testingCodeFiles/touch.py -s key"```
-   Or, to try a default version with arguments inputted, run ```make run-lazy```
+   - Try running ```make run ARGS="testingCodeFiles/touch.py -s key"```
+   - Or, to try a default version with arguments inputted, run ```make run-lazy```
  
 ### Resources/ References:
 * https://github.com/ericyoc/obfuscation_techniques_poc/blob/main/README.md
