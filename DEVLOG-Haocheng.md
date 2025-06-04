@@ -48,3 +48,6 @@ Converted Google Docs format to .md format, added more information, and added to
 
 ### 2025-02-06 - pair programming
 Added modes for running program, wrote a more efficient version of FindSpaces, debugged other modes, implemented function to remove all empty lines, implemented function to add dead code.
+
+### 2025-03-06 - presentation video
+Fixed some bugs, particularly with dead code. Made the presenation video. Updated README.md and organized files to make the repo presentable.
