@@ -17,7 +17,7 @@ We built a Python code obfuscator that makes scripts harder to read while keepin
 
 1. Have the required program files: the `makefile`, `encode.py`, and `obfuscator.py`, as well as a python program that you want to obfuscate. (We have two test file - touch.py and testInput.py - in the subdirectory testingCodeFiles.)
 2. Use `make run` to run the program, but make sure to include the following arguments:
-        - the path to the code file you would like to obfuscate
+	- the path to the code file you would like to obfuscate
 	- to pick a obfuscation version, use one of the following flags
 		- `-m` for random mapping identifier renaming
 		- `-v` for vigenere identifier renaming
