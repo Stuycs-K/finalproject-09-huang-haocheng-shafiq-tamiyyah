@@ -32,3 +32,9 @@ Added vigenere cipher function for name change obfuscation.
 
 ### 2025-02-06 - pair programming
 Added modes for running program, wrote a more efficient version of FindSpaces, debugged other modes, implemented function to remove all empty lines, implemented function to add dead code.
+
+### 2025-03-06 - presentation video
+Fixed some bugs, particularly with dead code. Made the presenation video.
+
+### 2025-04-06 - presentation video
+Fixed some bugs, particularly with indentation, test files. Final review.
